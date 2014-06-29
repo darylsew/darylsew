@@ -22,7 +22,18 @@
 	<script src="js/services/GeekService.js"></script>
 	<script src="js/appRoutes.js"></script>
 	<script src="js/app.js"></script>
-</head>
+
+
+        <!-- FAMOUS-ANGULAR -->
+        <script src="bower_components/requirejs/require.js"></script>
+        <script>
+            //set requirejs's base to where the famous lib folder lives
+            require.config({baseUrl: 'bower_components'});
+        </script>
+        <script src="bower_components/famous-angular/dist/famous-angular.js"></script>
+        <link rel="stylesheet" href="bower_components/famous-angular/dist/famous-angular.css">
+
+    </head>
 <body ng-app="sampleApp" ng-controller="NerdController">
 <div class="container">
 	
@@ -39,7 +50,8 @@
 
 	<!-- ANGULAR DYNAMIC CONTENT -->
 	<div ng-view></div>
+        <fa-app style="height: 200px"><fa-surface fa-background-color="'red'">Hello world</fa-surface></fa-app>
 
 </div>
-</body>
+  </body>
 </html>
