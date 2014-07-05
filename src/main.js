@@ -48,13 +48,23 @@ define(function(require, exports, module) {
 
     layout.header.add(new Surface({
         size: [undefined, 100],
-        content: "Header",
+        content: "yello",
         classes: ["red-bg"],
         properties: {
             lineHeight: "100px",
             textAlign: "center"
         }
     }));
+
+    var surface = new Surface({
+        size: [200, 200],
+        content: 'press keys',
+        classes: ['red-bg'],
+        properties: {
+            lineHeight: '200px',
+            textAlign: 'center'
+        }
+    });
 
     layout.content.add(new Surface({
         size: [undefined, undefined],
@@ -65,6 +75,8 @@ define(function(require, exports, module) {
             textAlign: "center"
         }
     }));
+
+    layout.content.add(surface);
 
     layout.footer.add(new Surface({
         size: [undefined, 50],
